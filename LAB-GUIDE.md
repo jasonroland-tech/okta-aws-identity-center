@@ -5,9 +5,19 @@
 
 Uses the Okta org from Lab 1. 📸 = screenshot. Redact AWS account IDs and URLs.
 
+## Before you start
+
+**Accounts**
+- [ ] **Okta org from Lab 1** (same Integrator Free Plan org, with Ava and Cara in it).
+- [ ] **AWS account**: sign up at aws.amazon.com/free with your personal email. AWS asks for a credit or debit card and a phone verification even on the free plan; this lab creates nothing that bills, and Step 1 adds a zero spend alert.
+- [ ] **Authenticator app** on your phone for the AWS root MFA (Okta Verify, Microsoft Authenticator or Google Authenticator all work).
+
+**Software:** none. Everything happens in the browser.
+*Optional stretch only:* AWS CLI, `brew install awscli`, plus Terraform from Lab 1.
+
 ## AWS setup (10 min)
 
-**1. AWS account** at aws.amazon.com/free. Turn on **root MFA** (account menu > Security credentials) and create a **Zero spend budget** (Billing > Budgets).
+**1. Secure the AWS account.** Sign in as root. Turn on **root MFA** (account menu > Security credentials) and create a **Zero spend budget** (Billing > Budgets).
 *Why:* root is AWS's break glass account, and the budget emails you if anything costs money.
 
 **2. Enable IAM Identity Center** in **US East (Ohio)**.
